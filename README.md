@@ -1,15 +1,15 @@
 # Checksum
-Prints checksum of the file based on Golang's crypto library and golang.org/x/crypto
+Prints checksum of the file based on Golang's crypto library and golang.org/x/crypto  
 
 ## Usage
   ### Usage: checksum [OPTION] ... [FILE]
-  Prints checksum of the file based on Golang's crypto library and golang.org/x/crypto. <br />
-  Defaults to SHA2-256 (256-bit) checksums. <br />
+  Prints checksum of the file based on Golang's crypto library and golang.org/x/crypto.  
+  Defaults to SHA2-256 (256-bit) checksums.  
 
 ## Options:
   -h, --help          Displays this help command <br />
-  -c, --checksum      Checksum algorithm. Defaults to SHA2 256-bit checksum. <br />
-  -f, --file          Does a checksum on the file defined. Defaults to SHA2 256-bit checksum. <br />
+  -c, --checksum      Checksum algorithm. Defaults to SHA2 256-bit checksum.  
+  -f, --file          Does a checksum on the file defined. Defaults to SHA2 256-bit checksum.  
 
 ## Available checksums:
   md4 - Performs MD4 hash algorithm as defined in RFC 1320.  
