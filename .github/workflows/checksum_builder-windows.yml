@@ -1,8 +1,11 @@
 name: Checksum builder Windows
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  push:
+    branches:
+      - main
+    tags:
+      - *
 
 jobs:
   build:
