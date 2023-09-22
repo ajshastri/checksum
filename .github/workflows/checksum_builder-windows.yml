@@ -23,4 +23,4 @@ jobs:
         run: |
           touch file
           echo 1  >> file
-          checksum.exe -c sha256 -f file
+          .\checksum.exe -c sha256 -f file
