@@ -3,9 +3,8 @@
 name: Checksum builder
 
 on:
-  push:
-    tags:
-      - '*'
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   setup:
