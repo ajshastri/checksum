@@ -22,11 +22,13 @@ jobs:
   build:
     needs: setup
     runs-on: ubuntu-latest
-      - name: Compile 
+    steps:
+      - name: compile 
         run: go build checksum.go
   validate: 
     needs: build
     runs-on: ubuntu-latest
+    steps:
       - name: Test
         run: |
           touch file
