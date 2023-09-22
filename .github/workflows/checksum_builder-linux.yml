@@ -1,6 +1,4 @@
-# This file updates the NUSPEC(s) in the repo checking the API
-
-name: Checksum builder
+name: Checksum builder Linux
 
 on:
   schedule:
