@@ -7,7 +7,7 @@ on:
     - cron: '*/5 * * * *'
 
 jobs:
-  setup:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -19,16 +19,8 @@ jobs:
         with :
           go-version: 'stable'
           check-latest: true  
-  build:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - name: compile 
         run: go build checksum.go
-  validate: 
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Test
         run: |
           touch file
