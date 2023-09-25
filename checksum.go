@@ -28,7 +28,7 @@ func help(exitCode int) {
 		"  Defaults to SHA2-256 (256-bit) checksums.\n\n")
 	fmt.Println("Options:  ")
 	fmt.Println("  -h, --help          Displays this help command")
-	fmt.Println("  -c, --checksum      Checksum algorithm. Defaults to SHA2 256-bit checksum.")
+	fmt.Println("  -s, --checksum      Checksum algorithm. Defaults to SHA2 256-bit checksum.")
 	fmt.Printf("  -f, --file          Does a checksum on the file defined. Defaults to SHA2 256-bit checksum.\n\n")
 	fmt.Println("Available checksums:")
 	fmt.Println("  md4 - Performs MD4 hash algorithm as defined in RFC 1320.")
@@ -119,7 +119,7 @@ func main() {
 
 	flag.Usage = func() { help(2) }
 	flag.StringVar(&sumPtr, "checksum", "sha2-256", "Checksum to be calculated")
-	flag.StringVar(&sumPtr, "c", "sha2-256", "Checksum to be calculated")
+	flag.StringVar(&sumPtr, "s", "sha2-256", "Checksum to be calculated")
 	flag.StringVar(&fileName, "f", "", "")
 	flag.StringVar(&fileName, "file", "", "")
 	flag.Parse()
