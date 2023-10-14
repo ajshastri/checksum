@@ -35,4 +35,13 @@ jobs:
           path: |
             checksum
             checksum.sha256
+      - name: Upload Release Asset
+        id: upload-linux-binary
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        with:
+          files: |
+            checksum
+            checksum.sha256
 

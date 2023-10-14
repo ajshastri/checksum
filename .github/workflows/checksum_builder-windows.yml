@@ -27,7 +27,7 @@ jobs:
           touch file
           echo 1  >> file
           .\checksum.exe -s sha256 -f file
-          .\checksum.exe -s sha256 -f checksum.exe > checksum.sha256
+          .\checksum.exe -s sha256 -f checksum.exe > checksum-win.sha256
       - name: Upload to checksum binary to github
         uses: actions/upload-artifact@v3
         with:
@@ -35,3 +35,12 @@ jobs:
           path: |
             checksum.exe
             checksum.sha256
+      - name: Upload Release Asset
+        id: upload-windows-binary
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        with:
+          files: |
+            checksum.exe
+            checksum-win.sha256
