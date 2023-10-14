@@ -2,8 +2,8 @@ name: Checksum builder Linux
 
 on:
   push:
-#    branches:
-#      - main
+    #    branches:
+    #      - main
     tags:
       - '*'
 
@@ -17,10 +17,10 @@ jobs:
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Setup Go
         uses: actions/setup-go@v4
-        with :
+        with:
           go-version: 'stable'
-          check-latest: true  
-      - name: compile 
+          check-latest: true
+      - name: compile
         run: go build checksum.go
       - name: Test
         run: |

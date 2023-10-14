@@ -16,6 +16,8 @@ import (
 	"strings"
 )
 
+const VERSION = "0.0.1"
+
 var (
 	sumPtr   string
 	fileName string
@@ -34,10 +36,10 @@ func help(exitCode int) {
 	fmt.Println("  md4 - Performs MD4 hash algorithm as defined in RFC 1320.")
 	fmt.Println("  md5 - Performs MD5 hash algorithm as defined in RFC 1321.")
 	fmt.Println("  sha1 - Performs SHA-1 hash algorithm as defined in RFC 3174.")
-	fmt.Println("  sha2-224 / sha224 - Performs SHA2-224 hash algorithms as defined in FIPS 180-4.")
-	fmt.Println("  sha2-256 / sha256 - Performs SHA2-256 hash algorithms as defined in FIPS 180-4.")
-	fmt.Println("  sha2-384 / sha384 - Performs SHA2-384 hash algorithms as defined in FIPS 180-4.")
-	fmt.Println("  sha2-512 / sha512 - Performs SHA2-512 hash algorithms as defined in FIPS 180-4.")
+	fmt.Println("  sha224 / sha2-224 - Performs SHA2-224 hash algorithms as defined in FIPS 180-4.")
+	fmt.Println("  sha256 / sha2-256 - Performs SHA2-256 hash algorithms as defined in FIPS 180-4.")
+	fmt.Println("  sha384 / sha2-384 - Performs SHA2-384 hash algorithms as defined in FIPS 180-4.")
+	fmt.Println("  sha512 / sha2-512 - Performs SHA2-512 hash algorithms as defined in FIPS 180-4.")
 	fmt.Println("  sha3-224 - Performs SHA3-224 hash algorithms as defined in FIPS 180-4.")
 	fmt.Println("  sha3-256 - Performs SHA3-256 hash algorithms as defined in FIPS 180-4.")
 	fmt.Println("  sha3-384 - Performs SHA3-384 hash algorithms as defined in FIPS 180-4.")
