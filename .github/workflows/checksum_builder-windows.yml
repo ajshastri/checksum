@@ -27,3 +27,11 @@ jobs:
           touch file
           echo 1  >> file
           .\checksum.exe -s sha256 -f file
+          .\checksum.exe -s sha256 -f checksum.exe > checksum.sha256
+      - name: Upload to checksum binary to github
+        uses: actions/upload-artifact@v3
+        with:
+          name: checksum_win
+          path: |
+            checksum.exe
+            checksum.sha256
