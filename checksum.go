@@ -16,7 +16,7 @@ import (
 	"strings"
 )
 
-const VERSION = "0.0.1"
+const VERSION = "0.0.2"
 
 var (
 	sumPtr   string
