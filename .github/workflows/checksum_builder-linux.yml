@@ -27,9 +27,12 @@ jobs:
           touch file
           echo 1  >> file
           ./checksum -s sha256 -f file
-      - name: Upload to github
+          ./checksum -s sha256 -f checksum > checksum.sha256
+      - name: Upload to checksum binary to github
         uses: actions/upload-artifact@v3
         with:
           name: checksum
-          path: checksum
+          path: |
+            checksum
+            checksum.sha256
 
