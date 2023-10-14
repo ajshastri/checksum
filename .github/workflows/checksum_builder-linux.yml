@@ -2,8 +2,8 @@ name: Checksum builder Linux
 
 on:
   push:
-    branches:
-      - main
+#    branches:
+#      - main
     tags:
       - '*'
 
