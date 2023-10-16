@@ -16,7 +16,7 @@ import (
 	"strings"
 )
 
-const VERSION = "0.0.2"
+const checksum_version = "0.0.2"
 
 var (
 	sumPtr   string
@@ -24,12 +24,18 @@ var (
 	h        hash.Hash
 )
 
+func version() {
+	fmt.Println("Checksum version:", checksum_version)
+	os.Exit(0)
+}
+
 func help(exitCode int) {
 	fmt.Println("Usage: checksum [OPTION] ... [FILE]")
 	fmt.Printf("  Prints checksum of the file based on Golang's crypto library and golang.org/x/crypto.\n" +
 		"  Defaults to SHA2-256 (256-bit) checksums.\n\n")
 	fmt.Println("Options:  ")
 	fmt.Println("  -h, --help          Displays this help command")
+	fmt.Println("  -V, --version       Displays the current version")
 	fmt.Println("  -s, --checksum      Checksum algorithm. Defaults to SHA2 256-bit checksum.")
 	fmt.Printf("  -f, --file          Does a checksum on the file defined. Defaults to SHA2 256-bit checksum.\n\n")
 	fmt.Println("Available checksums:")
@@ -120,12 +126,17 @@ func checksumCalc(sumPtr string, fileName string) {
 func main() {
 
 	flag.Usage = func() { help(2) }
+	verVer := flag.Bool("V", false, "A bool flag")
+	verVer2 := flag.Bool("version", false, "A bool flag")
 	flag.StringVar(&sumPtr, "checksum", "sha2-256", "Checksum to be calculated")
 	flag.StringVar(&sumPtr, "s", "sha2-256", "Checksum to be calculated")
 	flag.StringVar(&fileName, "f", "", "")
 	flag.StringVar(&fileName, "file", "", "")
 	flag.Parse()
 
-	checksumCalc(strings.ToLower(sumPtr), fileName)
+	if *verVer || *verVer2 {
+		version()
+	}
 
+	checksumCalc(strings.ToLower(sumPtr), fileName)
 }
