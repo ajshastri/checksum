@@ -73,46 +73,46 @@ func checksumCalc(sumPtr string, fileName string) {
 	// h := sha256.New() // Defaults to SHA256Sum
 	switch sumPtr {
 	case "md4":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = md4.New()
 	case "md5":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = md5.New()
 	case "sha1":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha1.New()
 	case "sha2-224", "sha224":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha256.New224()
 	case "sha256", "sha2-256":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha256.New()
 	case "sha384", "sha2-384":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha512.New384()
 	case "sha512", "sha2-512":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha512.New()
 	case "sha2-512_224", "sha512_224":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha512.New512_224()
 	case "sha2-512_256", "sha512_256":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha512.New512_256()
 	case "sha3-224":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha3.New224()
 	case "sha3-256":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha3.New256()
 	case "sha3-384":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha3.New384()
 	case "sha3-512":
-		fmt.Println("Switch case", sumPtr)
+		// fmt.Println("Switch case", sumPtr)
 		h = sha3.New512()
 	default:
-		fmt.Println("Unidentified Checksum. Please refer to the help document:")
+		// fmt.Println("Unidentified Checksum. Please refer to the help document:")
 		help(2)
 	}
 	if _, err := io.Copy(h, f); err != nil {
