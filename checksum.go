@@ -48,10 +48,9 @@ func help(exitCode int) {
 	fmt.Println("  sha512 / sha2-512 - Performs SHA2-512 hash algorithms as defined in FIPS 180-4.")
 	fmt.Println("  sha3-224 - Performs SHA3-224 hash algorithms as defined in FIPS 180-4.")
 	fmt.Println("  sha3-256 - Performs SHA3-256 hash algorithms as defined in FIPS 180-4.")
-	fmt.Println("  sha3-384 - Performs SHA3-384 hash algorithms as defined in FIPS 180-4.")
-	fmt.Println("  sha3-512 - Performs SHA3-512 hash algorithms as defined in FIPS 180-4.")
-	fmt.Println("  sha2-512_224 / sha512_224 - Performs SHA2-512 hash algorithms as defined in FIPS 180-4.")
-	fmt.Println("  sha2-512_256 / sha512_256 - Performs SHA2-512 hash algorithms as defined in FIPS 180-4.")
+	fmt.Println("  sha512_224 / sha2-512_224 - Performs SHA2-512 hash algorithms as defined in FIPS 180-4.")
+	fmt.Println("  sha512_256 / sha2-512_256 - Performs SHA2-512 hash algorithms as defined in FIPS 180-4.")
+
 	os.Exit(exitCode)
 }
 
