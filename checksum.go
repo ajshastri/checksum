@@ -16,7 +16,7 @@ import (
 	"strings"
 )
 
-const checksum_version = "0.0.2"
+const checksumVersion = "0.0.2"
 
 var (
 	sumPtr   string
@@ -25,7 +25,7 @@ var (
 )
 
 func version() {
-	fmt.Println("Checksum version:", checksum_version)
+	fmt.Println("Checksum version:", checksumVersion)
 	os.Exit(0)
 }
 
