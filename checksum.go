@@ -16,7 +16,7 @@ import (
 	"strings"
 )
 
-const checksumVersion = "0.0.2"
+const checksumVersion = "0.1.0"
 
 var (
 	sumPtr   string
