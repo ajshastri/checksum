@@ -1,10 +1,10 @@
 name: Checksum builder Linux
 
 on:
+  workflow_dispatch:
   push:
     #    branches:
     #      - main
-    workflow_dispatch:
     tags:
       - '*'
 
