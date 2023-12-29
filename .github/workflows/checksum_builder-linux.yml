@@ -30,7 +30,7 @@ jobs:
           ./checksum -s sha256 -f file
           ./checksum -s sha256 -f checksum > checksum.sha256
           tar -czf checksum-linux.tar.gz checksum checksum.sha256
-          ./checksum -s sha256 -f checksum.tar.gz > checksum-linux.tar.gz.sha256
+          ./checksum -s sha256 -f checksum-linux.tar.gz > checksum-linux.tar.gz.sha256
       - name: Upload to checksum binary to github
         uses: actions/upload-artifact@v3
         with:
