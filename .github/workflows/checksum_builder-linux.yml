@@ -45,6 +45,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         with:
           files: |
-            checksum.tar.gz
-            checksum.tar.gz.sha256
+            checksum-linux.tar.gz
+            checksum-linux.tar.gz.sha256
 
