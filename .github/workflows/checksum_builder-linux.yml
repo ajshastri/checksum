@@ -28,15 +28,15 @@ jobs:
           echo 1  >> file
           ./checksum -s sha256 -f file
           ./checksum -s sha256 -f checksum > checksum.sha256
-          tar -czf checksum.tar.gz checksum checksum.sha256
-          ./checksum -s sha256 -f checksum.tar.gz > checksum.tar.gz.sha256
+          tar -czf checksum-linux.tar.gz checksum checksum.sha256
+          ./checksum -s sha256 -f checksum.tar.gz > checksum-linux.tar.gz.sha256
       - name: Upload to checksum binary to github
         uses: actions/upload-artifact@v3
         with:
           name: checksum
           path: |
-            checksum.tar.gz
-            checksum.tar.gz.sha256
+            checksum-linux.tar.gz
+            checksum-linux.tar.gz.sha256
       - name: Upload Release Asset
         id: upload-linux-binary
         uses: softprops/action-gh-release@v1
