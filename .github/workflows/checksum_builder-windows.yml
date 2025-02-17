@@ -31,7 +31,7 @@ jobs:
           Compress-Archive -LiteralPath '.\checksum.exe', 'checksum.exe.sha256' -DestinationPath 'checksum-win.zip'
           .\checksum.exe -s sha256 -f 'checksum-win.zip' > checksum-win.zip.sha256
       - name: Upload to checksum binary to github
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact
         with:
           name: checksum_win
           path: |

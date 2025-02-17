@@ -32,7 +32,7 @@ jobs:
           tar -czf checksum-linux.tar.gz checksum checksum.sha256
           ./checksum -s sha256 -f checksum-linux.tar.gz > checksum-linux.tar.gz.sha256
       - name: Upload to checksum binary to github
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact
         with:
           name: checksum
           path: |
